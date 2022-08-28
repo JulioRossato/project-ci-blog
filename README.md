@@ -1,4 +1,4 @@
-# **CI Blog** :shopping_cart:
+# **CI Blog** :newspaper:
 
 ## About
 
