@@ -1,63 +1,101 @@
-# CodeIgniter 4 Application Starter
+# **CI Blog** :shopping_cart:
 
-## What is CodeIgniter?
+## About
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
+CI Blog is a bespoke blog/news framework built on some of the most popular open source technologies such as Codeigniter and Vue.js.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## :floppy_disk:  Technologies
 
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
+Libraries and Frameworks:
 
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+- [CodeIgniter](https://codeigniter.com/) is a powerful PHP framework with a very small footprint, built for developers who need a simple and elegant toolkit to create full-featured web applications.
+- [REST API](https://www.redhat.com/en/topics/api/what-is-a-rest-api) is an application programming interface that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services.
+- [JWT](https://jwt.io/) JSON Web Tokens are an open, industry standard RFC 7519 method for representing claims securely between two parties.
 
-## Installation & updates
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+## Installation
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+#### Requirements
 
-## Setup
+- PHP 7.4
+- MySQL (undefined)
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+#### Configuration
 
-## Important Change with index.php
+- Create the **.env** file:
+```shell
+cp env .env
+```
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+- Open the **.env** file and configure the database access
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+```
+database.default.hostname = localhost
+database.default.database = ci4
+database.default.username = root
+database.default.password = root
+database.default.DBDriver = MySQLi
+# database.default.DBPrefix =
+database.default.port = 3306
+```
 
-**Please** read the user guide for a better explanation of how CI4 works!
+- Install packages
+```shell
+composer install
+```
 
-## Repository Management
+- Create database tables (CI4 migrations)
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+```shell
+php spark migrate
+```
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+## :books: Best Practices
 
-## Server Requirements
+#### Scrum
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+Scrum is a lightweight framework that helps people, teams and organizations generate value through adaptive solutions for complex problems\
+[https://www.scrum.org/](https://www.scrum.org/)
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+#### GitFlow
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+GitFlow is a branching model for Git\
+[https://datasift.github.io/gitflow/IntroducingGitFlow.html](https://datasift.github.io/gitflow/IntroducingGitFlow.html)
 
-- json (enabled by default - don't turn it off)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
+#### Commit Pattern
+
+In general the pattern mostly looks like this:
+
+`type(scope?): subject  #scope is optional; multiple scopes are supported (current delimiter options: "/", "\" and ",")`
+> The scope should be the git issue id
+
+##### Messages exemples
+
+`chore: run tests on travis ci`
+
+`fix(#1): send cors headers`
+
+`feat(#150): add comment section`
+
+##### Common types
+
+- build
+- ci
+- chore
+- docs
+- feat
+- fix
+- perf
+- refactor
+- revert
+- style
+- test
+
+
+## :man_technologist:Software team  :rocket::large_blue_circle:
+
+- Júlio Rossato - Project manager ([contato@julirossato.com.br](mailto:contato@julirossato.com.br))
+- Júlio Rossato - Team Leader ([contato@julirossato.com.br](mailto:contato@julirossato.com.br))
+
+##### Development team
+
