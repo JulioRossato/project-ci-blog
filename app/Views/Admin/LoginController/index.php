@@ -20,7 +20,7 @@
         <link href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
 
         <!-- Toastr CSS -->
-        <link href="/node_modules/izitoast/dist/css/iziToast.min.css" rel="stylesheet" />
+        <link href="/node_modules/izitoast/src/css/iziToast.min.css" rel="stylesheet" />
 
         <!-- Template Main CSS File -->
         <link href="/assets/Admin/css/style.css" rel="stylesheet">
@@ -128,7 +128,7 @@
         <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
         <script src="/node_modules/jquery/dist/jquery.min.js"></script>
         <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="/node_modules/izitoast/dist/js/iziToast.min.js"></script>
+        <script src="/node_modules/izitoast/src/js/iziToast.min.js"></script>
         <script src="/assets/Admin/js/main.js"></script>
         <!-- Template Modules JS File -->
         <script src="/assets/Admin/modules/<?= $page_controller; ?>.js"></script>
